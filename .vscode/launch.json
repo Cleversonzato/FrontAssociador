@@ -1,12 +1,18 @@
 {
     "configurations": [
-    {
-      "type": "firefox",
-      "request": "launch",
-      "name": "Firefox",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}/src",     
-      "preLaunchTask": "vuejs: start"
-        }
+      {
+        "type": "firefox",
+        "request": "launch",
+        "name": "Firefox",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}/src",
+        "preLaunchTask": "vuejs: start",
+        "pathMappings": [
+          {
+            "url": "webpack:///src",
+            "path": "${workspaceFolder}/src"
+          }
+        ]
+      }
     ]
 }
