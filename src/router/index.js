@@ -22,4 +22,13 @@ const router = createRouter({
   routes
 })
 
+
+router.beforeEach((to, from, next) => {
+  if (!localStorage.getItem("concorda") && to.name != 'home'){
+      next({name:'home'})
+  } else {
+    next()
+  }  
+})
+
 export default router
