@@ -1,21 +1,20 @@
 <template>
   <div class="home">       
-    <h1>{{ lang.home.titulo }}</h1>    
-    <img src="../../images/cyber.jpg" class="img-fluid" alt="Imagem de título"/> 
-    <h3>Seja bem vindo(a) à este site de pesquisa sobre associações e testes!</h3>
-    <p>
-      Esta é uma pesquisa sobre associação e verificação de comportamento com relação à interação com o computador.
-      Nenhum dado é de preenchimento obrigatório e nenhuma de identificação é armazenado e todas as informações são obtidas com o objetivo de construir um perfil para a pesquisa.
-      E a IA fica mais esperta com o tempo.
-    </p> 
-    <p> Sabendo disso, você concorda e deseja continuar neste experimento? </p>
-    <button type="button" class="btn btn-primary" v-on:click="concordou">Concordo</button>
+    <h1>{{ l.titulo }}</h1>    
+    <img src="../../images/cyber.jpg" class="img-fluid" :alt="l.image_alt"/> 
+    <h3>{{ l.sub_titulo }}</h3>
+    <p>{{ l.descricao }}</p>
+    <p>{{ l.frase_confirmar }}</p>
+    <button type="button" class="btn btn-primary" v-on:click="concordou">{{ l.butao }}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
+  created(){
+    localStorage.lang = navigator.language    
+  },
   methods:{
     concordou(){
       localStorage.concorda = true;
