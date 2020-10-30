@@ -44,16 +44,18 @@ export default {
   name: 'Perfil',
   methods:{
     iniciar_pesquisa(){
-      axios.post('perfil', {
-            'dt_nasc': this.$refs.dt_nasc.value,
-            'sexo':this.$refs.sexo.value,
-            'raca':this.$refs.raca.value,
-            'escolaridade':this.$refs.escolaridade.value,
-            'residencia':this.$refs.residencia.value,
-            'lateralidade':this.$refs.lateralidade.value
-          }).then(function (response) {
-            console.log(response);
-          });
+      // axios.post('perfil', {
+      //       'dt_nasc': this.$refs.dt_nasc.value,
+      //       'sexo':this.$refs.sexo.value,
+      //       'raca':this.$refs.raca.value,
+      //       'escolaridade':this.$refs.escolaridade.value,
+      //       'residencia':this.$refs.residencia.value,
+      //       'lateralidade':this.$refs.lateralidade.value
+      //     }).then(function (response) {
+      //       console.log(response);
+      //       this.$router.push('selecao')
+      //     });
+      this.$router.push('selecao')
     }
   }
 }
