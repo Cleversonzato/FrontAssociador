@@ -1,7 +1,9 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <router-view/>
+      <div class="col-2"/>
+        <router-view/>
+      <div class="col-2"/>
     </div>
   </div>
 </template>

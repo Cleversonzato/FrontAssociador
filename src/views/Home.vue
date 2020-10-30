@@ -12,9 +12,15 @@
 <script>
 export default {
   name: 'Home',
-  created(){
-    localStorage.lang = navigator.language    
+  beforeCreate(){
+    const q_lang = this.$route.query.lang
+    if(q_lang != null){
+      localStorage.lang = q_lang
+    }else{
+      localStorage.lang = navigator.language
+    }
   },
+  
   methods:{
     concordou(){
       localStorage.concorda = true;

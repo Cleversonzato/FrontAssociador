@@ -5,7 +5,7 @@
         "request": "launch",
         "name": "Firefox",
         "url": "http://localhost:8080",
-        "webRoot": "${workspaceFolder}",
+        "webRoot": "${workspaceFolder}/src",
         "preLaunchTask": "vuejs: start",
         "pathMappings": [
           {

@@ -8,6 +8,20 @@ const portugues_br = {
                     E a IA fica mais esperta com o tempo.',
         "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
         "butao":"Concordo"
+    },
+
+    "perfil":{
+        "titulo":"Dados socioeconômicos",
+        "explicacao": "Todos as informações são não obigatórias, auto declaratórias e de respostas abertas:",
+        "dt_nasc": "Data de nascimento:",
+        "sexo": "Sexo:",
+        "raca": "Raça:",
+        "escolaridade": "Escolaridade:",
+        "residencia": "Local de residência:",
+        "lateralidade": "Lateralidade:",
+        "lateralidade_explicacao": "se você é destro, canhoto ou ambidestro",
+        "mensagem_final": "Já preenchi todo o que precisava",
+        "botao": "Vamos lá!"
     }
 }
 
