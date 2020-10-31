@@ -31,7 +31,7 @@
 
     <div class="row final">
       <div class="final">{{ l.mensagem_final }}</div> 
-      <button type="button" class="btn btn-success" v-on:click="iniciar_pesquisa">{{ l.botao }}</button>
+      <button type="button" class="btn btn-success" v-on:click="iniciar_pesquisa" :disabled="clicado">{{ l.botao }}</button>
     </div>
 
   </div>
@@ -42,20 +42,28 @@ import axios from '../axios'
 
 export default {
   name: 'Perfil',
+  data(){
+    return{
+      clicado:false
+    }
+  },
   methods:{
     iniciar_pesquisa(){
-      // axios.post('perfil', {
-      //       'dt_nasc': this.$refs.dt_nasc.value,
-      //       'sexo':this.$refs.sexo.value,
-      //       'raca':this.$refs.raca.value,
-      //       'escolaridade':this.$refs.escolaridade.value,
-      //       'residencia':this.$refs.residencia.value,
-      //       'lateralidade':this.$refs.lateralidade.value
-      //     }).then(function (response) {
-      //       console.log(response);
-      //       this.$router.push('selecao')
-      //     });
-      this.$router.push('selecao')
+      this.clicado = true
+      const self = this
+      
+      axios.post('perfil', {
+            'dt_nasc': this.$refs.dt_nasc.value,
+            'sexo':this.$refs.sexo.value,
+            'raca':this.$refs.raca.value,
+            'escolaridade':this.$refs.escolaridade.value,
+            'residencia':this.$refs.residencia.value,
+            'lateralidade':this.$refs.lateralidade.value
+            
+          }).then(function (response) {
+            localStorage.teste = response.data.teste
+            self.$router.push('selecao')
+          });
     }
   }
 }
