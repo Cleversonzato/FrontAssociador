@@ -6,7 +6,7 @@ const portugues_br = {
         "descricao":'Esta é uma pesquisa sobre associação e verificação de comportamento com relação à interação com o computador. \
                     Nenhum dado é de preenchimento obrigatório e nenhuma de identificação é armazenado e todas as informações são obtidas com o objetivo de construir um perfil para a pesquisa. \
                     E a IA fica mais esperta com o tempo.',
-        "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
+        "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento? Tempo estimado de 10 minutos",
         "butao":"Concordo"
     },
 
@@ -24,10 +24,21 @@ const portugues_br = {
         "botao": "Vamos lá!"
     },
     "selecao":{
-        "titulo":"Selecione o formato do teste",
-    },
-    "teste":{
-
+        "titulo":"Selecione o formato do teste",   
+        'opcoes':'Marcar opções',
+        'escalas':'Escalas',
+        'digitadas':'Escrever a palavra',
+        'explicacao_opcoes':'Para este teste, serão apresentadas várias palavras com a opção de selecioná-las ou não. \
+                             basta selecionar as palavras que você acha que deve selecionar.',
+        'exemplo_opcoes1': 'Selecione',
+        'exemplo_opcoes2': 'Ou',
+        'exemplo_opcoes3': 'Não',
+        'explicacao_escalas':'Aqui serão apresentadas várias palavras, uma por vez, para você atribuir a quantidade que desejar à ela',
+        'exemplo_escalas': 'Quantidade',
+        'explicacao_digitadas':'Neste formato, é apresentada uma palavra e você deve escrever a primeira paravra que vier à mente',                                
+        'exemplo_digitadas': 'Palavra',
+        'exemplo_digitadas_input': 'Escreva uma palavra aqui',
+        'botao': 'Eu quero esse!'
     }
 }
 

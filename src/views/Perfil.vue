@@ -10,11 +10,11 @@
     </div>
     <div class="row formulario">
       <label for="sexo" class="col-form-label">{{ l.sexo }}</label> 
-      <input class="form-control" type="input" id="sexo" ref="sexo">
+      <input class="form-control" type="input" id="sexo" ref="sexo"/>
     </div>
     <div class="row formulario">
      <label for="raca" class="col-form-label">{{ l.raca }}</label> 
-     <input class="form-control" type="input" id="raca" ref="raca">
+     <input class="form-control" type="input" id="raca" ref="raca"/>
     </div>
     <div class="row formulario">
       <label for="escolaridade" class="col-form-label">{{ l.escolaridade }}</label> 
@@ -22,11 +22,11 @@
     </div>
     <div class="row formulario">  
      <label for="residencia" class="col-form-label"> {{ l.residencia }} </label> 
-     <input class="form-control" type="input" id="residencia" ref="residencia">
+     <input class="form-control" type="input" id="residencia" ref="residencia"/>
     </div>
     <div class="row formulario">
       <label for="lateralidade" class="col-form-label"> {{ l.lateralidade }}  <small>{{ l.lateralidade_explicacao }}</small>  </label> 
-      <input class="form-control" type="input" id="lateralidade" ref="lateralidade">     
+      <input class="form-control" type="input" id="lateralidade" ref="lateralidade"/>     
     </div>
 
     <div class="row final">
@@ -65,10 +65,7 @@ export default {
 .perfil{
   margin: 50px;
 }
-.formulario{
-  text-align: center;
-  margin: 5px;
-}
+
 .final{
   margin:10px;
 }

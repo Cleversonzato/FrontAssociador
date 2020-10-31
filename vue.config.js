@@ -1,3 +1,6 @@
 module.exports = {
-  lintOnSave: true  
+  lintOnSave: true,
+  publicPath:'',
+  assetsDir: 'static',
+  outputDir: 'frontend',
 }
