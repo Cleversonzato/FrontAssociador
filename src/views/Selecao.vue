@@ -4,12 +4,12 @@
     <div class="row">
         <button type="button" class="btn btn-light col-4" v-on:click="selecionar('opcoes')"> {{ l.opcoes }} </button>
     </div>
-    <div class="row">
+    <!-- <div class="row">
          <button type="button" class="btn btn-light col-4" v-on:click="selecionar('escalas')"> {{ l.escalas }} </button>
     </div>
     <div class="row">
         <button type="button" class="btn btn-light col-4" v-on:click="selecionar('digitadas')"> {{ l.digitadas }} </button>
-    </div>
+    </div> -->
     
     <div class="row">
         <div v-show="opcoes"> 
@@ -29,7 +29,7 @@
                 <label class="form-check-label">{{ l.exemplo_opcoes3 }}</label>
             </div>
         </div>
-        <div v-show="escalas" >
+  <!--       <div v-show="escalas" >
             <p class='col-12'>
                 {{ l.explicacao_escalas }}
             </p>
@@ -38,15 +38,15 @@
                 <input type="range" min="1" max="100" value="0" class="form-control-range" />    
             </div>
         </div>
-        <div v-show="digitadas">
+        <div v-show="textos">
             <p class='col-12'>
-                {{ l.explicacao_digitadas }}
+                {{ l.explicacao_textos }}
             </p>
             <div class="row formulario">
-                <label class="col-form-label" >{{ l.exemplo_digitadas }}</label> 
-                <input type="text" class="form-control" :placeholder="l.exemplo_digitadas_input"/>    
+                <label class="col-form-label" >{{ l.exemplo_textos }}</label> 
+                <input type="text" class="form-control" :placeholder="l.exemplo_textos_input"/>    
             </div>
-        </div>
+        </div> -->
     </div>
 
     <button type="button" class="btn btn-info col-4" v-on:click="escolhido"> {{ l.botao }} </button>
@@ -73,8 +73,7 @@ export default {
           }
       },
       escolhido(){
-          console.log(this.aba)
-          this.$router.push('teste')
+          this.$router.push({name:'teste', params:{'tipo':this.aba}})
       }
   }
 

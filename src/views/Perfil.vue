@@ -28,6 +28,10 @@
       <label for="lateralidade" class="col-form-label"> {{ l.lateralidade }}  <small>{{ l.lateralidade_explicacao }}</small>  </label> 
       <input class="form-control" type="input" id="lateralidade" ref="lateralidade"/>     
     </div>
+    <div class="row formulario">
+      <label for="livre" class="col-form-label"> {{ l.livre }} </label> 
+      <textarea id="livre" ref="livre"/>     
+    </div>
 
     <div class="row final">
       <div class="final">{{ l.mensagem_final }}</div> 
@@ -51,19 +55,20 @@ export default {
     iniciar_pesquisa(){
       this.clicado = true
       const self = this
-      
-      axios.post('perfil', {
-            'dt_nasc': this.$refs.dt_nasc.value,
-            'sexo':this.$refs.sexo.value,
-            'raca':this.$refs.raca.value,
-            'escolaridade':this.$refs.escolaridade.value,
-            'residencia':this.$refs.residencia.value,
-            'lateralidade':this.$refs.lateralidade.value
+      self.$router.push('selecao')
+      // axios.post('perfil', {
+      //       'lingua': localStorage.lang
+      //       'dt_nasc': this.$refs.dt_nasc.value,
+      //       'sexo':this.$refs.sexo.value,
+      //       'raca':this.$refs.raca.value,
+      //       'escolaridade':this.$refs.escolaridade.value,
+      //       'residencia':this.$refs.residencia.value,
+      //       'lateralidade':this.$refs.lateralidade.value
             
-          }).then(function (response) {
-            localStorage.teste = response.data.teste
-            self.$router.push('selecao')
-          });
+      //     }).then(function (response) {
+      //       localStorage.teste = response.data.teste
+      //       self.$router.push('selecao')
+      //     });
     }
   }
 }
