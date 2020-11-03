@@ -6,7 +6,9 @@
         <historia-espiao v-on:iniciar="iniciar_teste" v-if="seed < 0.5" />
       </div>
       <div class="respostas" v-show="selecionado">
-        <teste-opcoes v-on:evento="evento" v-on:finalizar="finalizar"/>
+        <teste-opcoes v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'opcoes'"/>
+        <teste-escalas v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'escalas'"/>
+        <teste-textos v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'textos'"/>
       </div>
     </div>    
   </div>
@@ -17,15 +19,18 @@
 import HistoriaOuroPerdido from '../components/historias/OuroPerdido'
 import HistoriaEspiao from '../components/historias/Espiao'
 import TesteOpcoes from '../components/testes/Opcoes'
-
+import TesteEscalas from '../components/testes/Escalas'
+import TesteTextos from '../components/testes/Textos'
 
 
 export default {
   name: 'Teste',
-  components: {
-      'teste-opcoes': TesteOpcoes,
+  components: {      
       'historia-ouro': HistoriaOuroPerdido,
-      'historia-espiao': HistoriaEspiao
+      'historia-espiao': HistoriaEspiao,
+      'teste-opcoes': TesteOpcoes,
+      'teste-escalas': TesteEscalas,
+      'teste-textos': TesteTextos
   },
   data(){
     return{
@@ -73,6 +78,7 @@ export default {
       console.log(this.tipo_teste)
       console.log(resultados)
 
+      this.$router.push({name:'resultado', query:{'resultado':'r'}})
       // axios.post('resultado', {
       //     'id_teste': this.id_teste,
       //     'tipo_teste': this.tipo_teste,

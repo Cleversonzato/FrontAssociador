@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'TesteOpcoes',
+  name: 'Opcoes',
   mounted(){
     this.iniciar()
   },

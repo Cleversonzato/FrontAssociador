@@ -29,7 +29,7 @@
                 <label class="form-check-label">{{ l.exemplo_opcoes3 }}</label>
             </div>
         </div>
-  <!--       <div v-show="escalas" >
+        <div v-show="escalas" >
             <p class='col-12'>
                 {{ l.explicacao_escalas }}
             </p>
@@ -46,7 +46,7 @@
                 <label class="col-form-label" >{{ l.exemplo_textos }}</label> 
                 <input type="text" class="form-control" :placeholder="l.exemplo_textos_input"/>    
             </div>
-        </div> -->
+        </div>
     </div>
 
     <button type="button" class="btn btn-info col-4" v-on:click="escolhido"> {{ l.botao }} </button>
