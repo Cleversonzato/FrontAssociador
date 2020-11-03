@@ -55,9 +55,20 @@ export default {
     iniciar_pesquisa(){
       this.clicado = true
       const self = this
+      console.log({
+            'data_milisegundos': Date.now(),
+            'ip': 'lembrar de pegar o ip no back',
+            'userAgent': navigator.userAgent,
+            'largura':window.innerWidth,
+            'altura': window.innerHeight})      
       self.$router.push('selecao')
       // axios.post('perfil', {
-      //       'lingua': localStorage.lang
+      //       'lingua': localStorage.lang,
+      //       'data_tc': Date.UTC(),
+      //       'local': window.location,
+      //       'userAgent': navigator.userAgent,
+      //       'largura':window.innerWidth,
+      //       'altura': window.innerHeight,
       //       'dt_nasc': this.$refs.dt_nasc.value,
       //       'sexo':this.$refs.sexo.value,
       //       'raca':this.$refs.raca.value,
