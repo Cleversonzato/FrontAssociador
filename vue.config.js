@@ -3,4 +3,7 @@ module.exports = {
   publicPath:'',
   assetsDir: 'static',
   outputDir: 'frontend',
+  devServer: {
+    host: 'localhost'
+  }
 }
