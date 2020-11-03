@@ -1,9 +1,9 @@
 <template>
   <div class="teste">
     <div class="row">
-      <div class="historia" v-show="!(selecionado)"> 
-        <historia-ouro v-on:iniciar="iniciar" v-if="seed >= 0.5"/>
-        <historia-espiao v-on:iniciar="iniciar" v-if="seed < 0.5"/>
+      <div class="historia" v-show="!(selecionado)">
+        <historia-ouro v-on:iniciar="iniciar_teste" v-if="seed >= 0.5" />
+        <historia-espiao v-on:iniciar="iniciar_teste" v-if="seed < 0.5" />
       </div>
       <div class="respostas" v-show="selecionado">
         <teste-opcoes v-on:evento="evento" v-on:finalizar="finalizar"/>
@@ -14,9 +14,10 @@
 
 <script>
 // import axios from '../axios'
-import HistoriaOuroPerdido from '../components/testes/Opcoes'
-import TesteOpcoes from '../components/historias/OuroPerdido'
+import HistoriaOuroPerdido from '../components/historias/OuroPerdido'
 import HistoriaEspiao from '../components/historias/Espiao'
+import TesteOpcoes from '../components/testes/Opcoes'
+
 
 
 export default {
@@ -31,11 +32,11 @@ export default {
       id_teste: localStorage.teste,
       tipo_teste: this.$route.params.tipo,
       seed: Math.random(),
-      selecionado: true
+      selecionado: false
     }
   },
   methods:{
-    iniciar(escolha){
+    iniciar_teste(escolha){
       console.log({
         'data_milisegundos': Date.now(),
         'seed':this.seed,
