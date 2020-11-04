@@ -34,7 +34,7 @@
     </div>
 
     <div class="row final">
-      <div class="final">{{ l.mensagem_final }}</div> 
+      <div class="final">{{ l.mensagem_final }}</div>
       <button type="button" class="btn btn-success" v-on:click="iniciar_pesquisa" :disabled="clicado">{{ l.botao }}</button>
     </div>
 

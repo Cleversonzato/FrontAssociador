@@ -3,15 +3,15 @@
 
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" v-on:click="evento" id='p1'>
-        <label class="form-check-label">{{ lo.p1 }}</label>
+        <label class="form-check-label">{{ l.p1 }}</label>
     </div>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" v-on:click="evento" id='p2'>
-        <label class="form-check-label">{{ lo.p2 }}</label>
+        <label class="form-check-label">{{ l.p2 }}</label>
     </div>
 
-    {{ lo.mensagem }}
-    <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ lo.botao }} </button>
+    {{ l.mensagem }}
+    <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ l.botao }} </button>
   </div>
 </template>
 
@@ -43,7 +43,6 @@ export default {
   data(){
     return{
       tempoInicial:0,
-      lo: this.l.opcoes,
 
       palavras:{
         p1:{sel:false, tempo:0},

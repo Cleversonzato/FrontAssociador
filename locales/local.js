@@ -14,13 +14,13 @@ const local = (local) => {
 
 /*
  Mixin para colocar em todo o app
- Feito para já selecionar automaticamnete os termos referentes à rota aessada
+ Feito para já selecionar automaticamnete os termos referentes ao nome do componente
 */
 const traducao_mixin = {
     data()
         {
             return{
-                l:local(localStorage.lang)[this.$route.name]
+                l:local(localStorage.lang)[this.$options.name]
             }
         }
     }

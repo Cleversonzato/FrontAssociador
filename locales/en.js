@@ -1,5 +1,5 @@
 const english = {
-    "home":{
+    "Home":{
         "titulo":"Can you fool the IAssociador?"
     }
 }
