@@ -1,9 +1,11 @@
 <template>
   <div class="perfil">    
     <h1>{{ l.titulo }}</h1>
+    <br/>    
+    <div>{{ l.explicacao }}</div> 
+    <small>{{ l.observacao }}</small> 
     <br/>
-    <p>{{ l.explicacao }}</p> 
-     
+    <br/>
     <div class="row formulario">
       <label for="dt_nasc" class="col-form-label">{{ l.dt_nasc }}</label> 
       <input class="form-control" type="date" id="dt_nasc" ref="dt_nasc">
@@ -30,9 +32,9 @@
     </div>
     <div class="row formulario">
       <label for="livre" class="col-form-label"> {{ l.livre }} </label> 
-      <textarea id="livre" ref="livre"/>     
+      <textarea id="livre" class="form-control" ref="livre"/>     
     </div>
-
+    <br/>
     <div class="row final">
       <div class="final">{{ l.mensagem_final }}</div>
       <button type="button" class="btn btn-success" v-on:click="iniciar_pesquisa" :disabled="clicado">{{ l.botao }}</button>

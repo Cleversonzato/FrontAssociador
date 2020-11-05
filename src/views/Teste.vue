@@ -78,7 +78,7 @@ export default {
       console.log(this.tipo_teste)
       console.log(resultados)
 
-      this.$router.push({name:'resultado'})
+      this.$router.push({name:'resultado', query:{'resultado':'r'}})
       // axios.post('resultado', {
       //     'id_teste': this.id_teste,
       //     'tipo_teste': this.tipo_teste,

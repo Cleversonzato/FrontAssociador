@@ -1,18 +1,22 @@
 const portugues_br = {
     "Home":{
-        "titulo":"Você consegue enganar o IAssociador?",
+        "titulo":"Vamos treinar o IAssociador!",
         "image_alt": 'Imagem do título',
-        "sub_titulo": "Seja bem vindo(a) à este site de pesquisa sobre associações e testes!",
-        "descricao":'Esta é uma pesquisa sobre associação e verificação de comportamento com relação à interação com o computador. \
-                    Nenhum dado é de preenchimento obrigatório e nenhuma de identificação é armazenado e todas as informações são obtidas com o objetivo de construir um perfil para a pesquisa. \
-                    E a IA fica mais esperta com o tempo.',
-        "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento? Tempo estimado de 10 minutos",
-        "butao":"Concordo"
+        "sub_titulo": "Seja bem vindo(a) à este site de pesquisa sobre associações, testes e inteligência artificial",
+        "descricao":'Este site realiza uma pesquisa sobre associação e comportamento na interação com uma inteligência artificial: \
+                    Será apresentada para você uma situação interativa a partir da qual o IAssociador vai tentar descobrir quais foram as suas decisões e, \
+                    aos poucos, aprender a adivinhar cada vez com mais precisão.',
+        "dados":'Nenhum dado é de preenchimento obrigatório e nenhuma forma de identificação que possa identificar você com as respostas é armazenada \
+                 sendo que todas as informações são utilizadas exclusivamente com o objetivo de construir um perfil para a pesquisa em questão.',
+
+        "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
+        "butao":"Sim, continue"
     },
 
     "Perfil":{
         "titulo":"Dados socioeconômicos",
-        "explicacao": "Todos as informações são não obigatórias, auto declaratórias e de respostas abertas:",
+        "explicacao": "Por favor, preencha com suas informações: *",
+        "observacao": "*Todos as informações auto declaratórias e de respostas abertas e nenhuma é obrigatória para continuar.",
         "dt_nasc": "Data de nascimento:",
         "sexo": "Sexo:",
         "raca": "Raça:",
@@ -21,7 +25,7 @@ const portugues_br = {
         "lateralidade": "Lateralidade:",
         "lateralidade_explicacao": "se você é destro, canhoto ou ambidestro",
         "livre":"Deseja fazer algum comentário?",
-        "mensagem_final": "Já preenchi todo o que precisava",
+        "mensagem_final": "Já preenchi todo o que queria,",
         "botao": "Vamos lá!"
     },
     "Selecao":{

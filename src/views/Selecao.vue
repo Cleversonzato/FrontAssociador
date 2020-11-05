@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-info col-4" v-on:click="escolhido"> {{ l.botao }} </button>
+    <button type="button" class="btn btn-success col-4" v-on:click="escolhido"> {{ l.botao }} </button>
   </div>
 </template>
 

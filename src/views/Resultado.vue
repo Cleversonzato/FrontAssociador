@@ -1,6 +1,6 @@
 <template>
   <div class="resultado">       
-
+    gfdgdfg
   </div>
 </template>
 

@@ -1,11 +1,19 @@
 <template>
   <div class="home">       
     <h1>{{ l.titulo }}</h1>    
-    <img src="../../images/cyber.jpg" class="img-fluid" :alt="l.image_alt"/> 
+    <img :src="require('../../images/exercicio_'+imagem+'.png')" class="img-fluid" :alt="l.image_alt" />    
     <h3>{{ l.sub_titulo }}</h3>
-    <p>{{ l.descricao }}</p>
-    <p>{{ l.frase_confirmar }}</p>
-    <button type="button" class="btn btn-primary" v-on:click="concordou">{{ l.butao }}</button>
+    <div class="home-body">
+      <div>{{ l.descricao }}</div>
+      <br/>
+      <div>{{ l.dados }}</div>
+      <br/>
+    </div>
+    <div>
+      {{ l.frase_confirmar }}
+    </div>
+    <br/>
+    <button type="button" class="btn btn-success" v-on:click="concordou">{{ l.butao }}</button>           
   </div>
 </template>
 
@@ -20,7 +28,11 @@ export default {
       localStorage.lang = navigator.language
     }
   },
-  
+  data(){
+    return{
+      imagem : (Math.floor(Math.random() * 10) + 1)
+    }
+  },
   methods:{
     concordou(){
       localStorage.concorda = true;
@@ -35,19 +47,19 @@ export default {
   margin: 50px;
 }
 
+.home-body{
+  text-align: justify;
+}
+
 img {
   max-height: 300px;
 }
 
-p {
-  margin: 5%;
-}
-
 h1 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 h3 {
-  margin: 5%;
+  margin: 7%;
 }
 </style>
