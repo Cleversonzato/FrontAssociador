@@ -35,8 +35,8 @@
       <textarea id="livre" class="form-control" ref="livre"/>     
     </div>
     <br/>
-    <div class="row final">
-      <div class="final">{{ l.mensagem_final }}</div>
+    <div class="final">
+      <div>{{ l.mensagem_final }}</div>
       <button type="button" class="btn btn-success" v-on:click="iniciar_pesquisa" :disabled="clicado">{{ l.botao }}</button>
     </div>
 
@@ -88,12 +88,13 @@ export default {
 </script>
 
 <style scoped>
-.perfil{
-  margin: 50px;
-}
 
 .final{
-  margin:10px;
+  text-align: center;  
+}
+
+.btn{
+  margin:1%;
 }
 
 </style>

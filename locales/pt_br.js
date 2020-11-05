@@ -25,7 +25,7 @@ const portugues_br = {
         "lateralidade": "Lateralidade:",
         "lateralidade_explicacao": "se você é destro, canhoto ou ambidestro",
         "livre":"Deseja fazer algum comentário?",
-        "mensagem_final": "Já preenchi todo o que queria,",
+        "mensagem_final": "Já preenchi tudo o que queria,",
         "botao": "Vamos lá!"
     },
     "Selecao":{
@@ -36,16 +36,25 @@ const portugues_br = {
         'explicacao_opcoes':'Para este teste, serão apresentadas várias palavras com a opção de selecioná-las ou não. \
                              basta selecionar as palavras que você acha que deve selecionar.',
         'exemplo_opcoes1': 'Selecione',
-        'exemplo_opcoes2': 'Ou',
-        'exemplo_opcoes3': 'Não',
-        'explicacao_escalas':'Aqui serão apresentadas várias palavras, uma por vez, para você atribuir a quantidade que desejar à ela',
+        'exemplo_opcoes2': 'Várias',
+        'exemplo_opcoes3': 'Opções',
+        'exemplo_opcoes4': 'Ou',
+        'exemplo_opcoes5': 'Talvez',
+        'exemplo_opcoes6': 'Não',
+        'explicacao_escalas':'Aqui serão apresentadas várias palavras, uma por vez, para você atribuir a quantidade que desejar à ela na escala',
         'exemplo_escalas': 'Quantidade',
         'explicacao_digitadas':'Neste formato, é apresentada uma palavra e você deve escrever a primeira paravra que vier à mente',                                
-        'exemplo_digitadas': 'Palavra',
-        'exemplo_digitadas_input': 'Escreva uma palavra aqui',
+        'exemplo_digitadas': 'Digitação',
+        'exemplo_digitadas_input': 'EscrevaUmaPalavraRelacionadaAqui',
         'botao': 'Eu quero esse!'
     }, 
     "Teste":{
+    },
+    "Escalas":{
+        "mensagem":"Já selecionei tudo",
+    },
+    "Digitadas":{
+        "mensagem":"Já selecionei tudo",
     },
     "Opcoes":{
         "mensagem":"Já selecionei tudo",

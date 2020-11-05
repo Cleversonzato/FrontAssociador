@@ -1,5 +1,5 @@
 <template>
-  <div class="teste-textos">
+  <div class="teste-digitadas">
 
     <div class="form-group form-check">
         <input type="text" class="form-check-input" v-on:click="evento" id='p1'>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Textos',
+  name: 'Digitadas',
   mounted(){
     this.iniciar()
   },

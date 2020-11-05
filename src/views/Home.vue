@@ -7,13 +7,11 @@
       <div>{{ l.descricao }}</div>
       <br/>
       <div>{{ l.dados }}</div>
-      <br/>
     </div>
-    <div>
+    <div class="final">
       {{ l.frase_confirmar }}
-    </div>
-    <br/>
-    <button type="button" class="btn btn-success" v-on:click="concordou">{{ l.butao }}</button>           
+    </div>    
+    <button type="button" class="btn btn-success final" v-on:click="concordou">{{ l.butao }}</button>           
   </div>
 </template>
 
@@ -43,10 +41,6 @@ export default {
 </script>
 
 <style scoped>
-.home{
-  margin: 50px;
-}
-
 .home-body{
   text-align: justify;
 }
@@ -62,4 +56,9 @@ h1 {
 h3 {
   margin: 7%;
 }
+
+.final{
+    margin-top: 5%;
+}
+
 </style>

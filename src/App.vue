@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-2"/>
-        <router-view/>
-      <div class="col-2"/>
+  <div class="container-fluid">
+    <div class="row app">
+      <div class="col-md-2 col-lg-2 col-xl-3"/>
+        <div class="col-md-8 col-lg-8 col-xl-6">
+          <router-view/>
+        </div>
+      <div class="col-md-2 col-lg-2 col-xl-3"/>
     </div>
   </div>
 </template>
@@ -28,5 +30,13 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.app{
+  margin:3%
+}
+
+button{
+  margin-bottom: 5%;
 }
 </style>

@@ -1,12 +1,6 @@
 <template>
   <div class="teste-escalas">
 
-    <div class="form-group form-check">
-        <input type="range" class="form-check-input" v-on:click="evento" id='p1'>
-        <label class="form-check-label">{{ l.p1 }}</label>
-    </div>
-
-
     {{ l.mensagem }}
     <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ l.botao }} </button>
   </div>
@@ -20,18 +14,10 @@ export default {
   },
   methods:{
       iniciar(){
-        this.tempoInicial = new Date().getTime()
       },
       evento(evento){
-        const id = evento.target.id
-        const tempo = new Date().getTime()-this.tempoInicial
-        const sel = evento.target.checked
-        const palavra = this.$data.palavras[id]
         
-        palavra.tempo = tempo
-        palavra.sel = sel
-        
-        this.$emit('evento', {'id_palavra': id, 'seleção': sel, 'tempo':tempo})  
+        this.$emit('evento', {evento})  
       },
       finalizar(){
         this.$emit('finalizar', this.palavras)
