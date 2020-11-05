@@ -57,9 +57,9 @@ const portugues_br = {
         "mensagem":"Já selecionei tudo",
     },
     "Opcoes":{
-        "mensagem":"Já selecionei tudo",
-        "botao":"Encerrar",
-
+        "mensagem":"Já selecionei tudo que queria, ",
+        "botao":"pode encerar.",
+            
         "p1":"Conhecimento",
         "p2":"Vermelho",
         "p3":"Espada",
@@ -109,7 +109,8 @@ const portugues_br = {
         "p47":"Carro",
         "p48":"Visão",
         "p49":"Ouro",
-        "p50":"Viagem"
+        "p50":"Viagem",
+        "p51":"Fogo"
     },
     "Resultado":{
         "titulo":"Você...",

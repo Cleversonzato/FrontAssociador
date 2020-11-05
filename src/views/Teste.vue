@@ -6,9 +6,9 @@
         <historia-espiao v-on:iniciar="iniciar_teste" v-if="seed < 0.5" />
       </div>
       <div class="respostas" v-show="selecionado">
-        <teste-opcoes v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'opcoes'"/>
-        <teste-escalas v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'escalas'"/>
-        <teste-digitadas v-on:evento="evento" v-on:finalizar="finalizar" v-if="tipo_teste === 'digitadas'"/>
+        <teste-opcoes v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'opcoes'"/>
+        <teste-escalas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'escalas'"/>
+        <teste-digitadas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'digitadas'"/>
       </div>
     </div>    
   </div>
@@ -37,14 +37,15 @@ export default {
       id_teste: localStorage.teste,
       tipo_teste: this.$route.params.tipo,
       seed: Math.random(),
-      selecionado: false
+      selecionado: false,
+      tempoInicial:0
     }
   },
   methods:{
     iniciar_teste(escolha){
+      this.tempoInicial = Date.now()
       console.log({
-        'data_milisegundos': Date.now(),
-        'seed':this.seed,
+        'data_milisegundos': this.tempoInicial,
         'escolha':escolha
       })
       // axios.post('escolha', {

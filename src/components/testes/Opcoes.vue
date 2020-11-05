@@ -1,16 +1,13 @@
 <template>
   <div class="teste-opcoes">
-
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" v-on:click="evento" id='p1'>
-        <label class="form-check-label">{{ l.p1 }}</label>
+    <div class="col-12 area-teste">
+      <div class="form-check-inline col-sm-12 col-md-3 col-lg-3 col-xl-3" v-for="(value, name) in palavras" :key="value" >
+          <input type="checkbox" class="form-check-input" v-on:click="evento" :id="name">
+          <label class="form-check-label" :for="name">{{ l[name] }} </label>
+      </div>
     </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" v-on:click="evento" id='p2'>
-        <label class="form-check-label">{{ l.p2 }}</label>
-    </div>
-
     {{ l.mensagem }}
+    <br/>
     <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ l.botao }} </button>
   </div>
 </template>
@@ -21,13 +18,11 @@ export default {
   mounted(){
     this.iniciar()
   },
+  props:['inicio'],
   methods:{
-      iniciar(){
-        this.tempoInicial = new Date().getTime()
-      },
-      evento(evento){
+      evento(evento){   
         const id = evento.target.id
-        const tempo = new Date().getTime()-this.tempoInicial
+        const tempo = new Date().getTime()- this.inicio
         const sel = evento.target.checked
         const palavra = this.$data.palavras[id]
         
@@ -94,9 +89,16 @@ export default {
         p47:{sel:false, tempo:0},
         p48:{sel:false, tempo:0},
         p49:{sel:false, tempo:0},
-        p50:{sel:false, tempo:0}
+        p50:{sel:false, tempo:0},
+        p51:{sel:false, tempo:0}
       }
     }
   }
 }
 </script>
+
+<style scoped>
+.area-teste{
+  margin: 10%;
+}
+</style>

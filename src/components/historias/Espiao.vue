@@ -1,8 +1,11 @@
 <template>
   <div class="espiao">
-    espiao <br/>
-    <button type="button" class="btn btn-info col-6" v-on:click="selecionar('sim')"> Sim </button>
-    <button type="button" class="btn btn-info col-6" v-on:click="selecionar('naums')"> Naum </button>
+    <div>
+      Espião
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RuTMTz-KF5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <button type="button" class="btn btn-danger col-6" v-on:click="selecionar('sim')"> Sim </button>
+    <button type="button" class="btn btn-danger col-6" v-on:click="selecionar('naums')"> Naum </button>
   </div>
 </template>
 
