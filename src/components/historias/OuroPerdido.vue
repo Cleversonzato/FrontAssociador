@@ -1,23 +1,58 @@
 <template>
-  <div class="ouro-perdido">
-    <div>
-      ouro
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/RuTMTz-KF5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <div id="player"></div>
+  <div class="ouro-perdido">     
+    <div class="imagens">
+      <img :src="'/images/rua.jpg'" class="img-fluid" :alt="l.rua_alt" v-show="etapa < 4"/>
+      <img :src="'/images/ouro.jpg'" class="img-fluid" :alt="l.ouro_alt" v-show="3 < etapa & etapa < 8" />
+      <img :src="'/images/reporteres.jpg'" class="img-fluid" :alt="l.reporteres_alt" v-show="7 < etapa & etapa < 12"/>
+      <img :src="'/images/exame.jpg'" class="img-fluid" :alt="l.rexame_alt" v-show=" 12 === etapa"/>
     </div>
-    <button type="button" class="btn btn-warning col-6" v-on:click="selecionar('pegar')"> Pegar </button>
-    <button type="button" class="btn btn-warning col-6" v-on:click="selecionar('deixar')"> Deixar </button>
+    <div class="textos" >
+      <div v-for="i in 12">  
+        <div v-show="etapa == i">{{ l[i] }}</div>
+      </div>
+    </div>   
+    <div class="botoes col-12">
+      <button type="button" class="btn btn-info col-6" v-on:click="etapa += 1" v-show="(7 != etapa & 12 != etapa )"> {{ l.proximo }} </button>
+      <div v-show="7 == etapa">     
+        <button type="button" class="btn btn-warning col-6" v-on:click="selecionar('pegar')" > {{ l.pegar }} </button>
+        <button type="button" class="btn btn-primary col-6" v-on:click="selecionar('deixar')"> {{ l.deixar }} </button>
+      </div>
+      <button type="button" class="btn btn-danger col-6" v-on:click="iniciar_teste" v-show=" 12 == etapa"> {{ l.iniciar }} </button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'OuroPerdido',
+  mounted(){
+   this.audio.play();
+   this.audio.loop = true;
+  },
+  data(){
+    return{
+      etapa:1,
+      selecao:"",
+      audio:new Audio('/historia.mp3')
+    }
+  },
   methods:{
-      selecionar(selecao){
-        this.$emit('iniciar', {'historia': 'Ouro perdido','selecao': selecao});
+      iniciar_teste(){
+        this.audio.pause()
+        this.$emit('iniciar', {'historia': 'Ouro perdido','selecao': this.selecao});
+      },
+      selecionar(escolha){
+        this.etapa += 1
+        this.selecao = escolha
       }
   }
 }
 </script>
+<style scoped>
+.imagens{
+  margin-top: 7%;
+}
+.textos{
+  margin:5%;
+}
+</style>

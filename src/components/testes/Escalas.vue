@@ -3,7 +3,7 @@
     <div class="area-teste">
       <div v-for="(valor, nome, i) in palavras" :key="valor">      
         <div class="form-group col-12" v-show="i == contador">  
-          <label class="col-form-label" :for="nome">{{ l[nome] }}</label> 
+          <label class="col-form-label" :for="nome"><h3>{{ l[nome] }}</h3></label> 
           <input type="range" class="form-control-range col-12" :id="nome" min="1" max="100"  v-on:click="evento" v-model="valor.quantidade"/>           
         </div>                 
       </div>
@@ -70,3 +70,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.area-teste{
+  margin-top:30%;
+  margin-bottom:20%;
+}
+label{
+  margin-bottom:5%;
+}
+</style>

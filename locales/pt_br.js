@@ -12,7 +12,6 @@ const portugues_br = {
         "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
         "butao":"Sim, continue"
     },
-
     "Perfil":{
         "titulo":"Dados socioeconômicos",
         "explicacao": "Por favor, preencha com suas informações: *",
@@ -48,7 +47,32 @@ const portugues_br = {
         'exemplo_digitadas_input': 'EscrevaUmaPalavraRelacionadaAqui',
         'botao': 'Eu quero esse!'
     }, 
-    "Teste":{},
+    "Teste":{
+        'carregando': 'Analisando suas respostas...',
+        'imagem_carregando':'carregando...'
+    },
+    "OuroPerdido":{
+        "1":"Hoje está fazendo um belo dia!",
+        "2":"Resolvi dar uma volta e andar por esta rua tranquila, para aproveitar.",
+        "3":"Mas espere, tem algo aqui...",
+        "4":"...isso é...",
+        "5":"...uma barra de ouro!!!",
+        "6":"É estranho achar uma barra de ouro assim, no meio da rua... Mas ao mesmo tempo, não tem ninguém perto...",
+        "7":"É a hora de decidir! Será que...",
+        "pegar":"... pego o ouro?",
+        "deixar": "... deixo aqui e vou embora?",
+        "8": "Saindo da rua, vejo uma aglomeração de repórteres. Parece que acabaram de prender um ladrão que roubou uma barra de ouro!",
+        "9": "E ao fugir, ele perdeu o ouro justamente onde acabei de passar...",
+        "10": "Os investigadores estão verificando o local agora mesmo, mas ainda não encontraram nada. Acreditam que alguém já pegou a barra",
+        "11": "E agora querem aplicar um teste em todos os que estão por perto para descobrir com quem está o ouro!",
+        "12": "Parece que usar um computador, e já começaram com a pessoa aqui na minha frente...",
+        "rua_alt":"imagem de rua tranquila",
+        "ouro_alt":"imagem de barra de ouro",
+        "reporteres_alt":"imagem de repórteres",
+        "exame_alt":"imagem de um homem fazendo o exame",
+        "proximo":"Continuar",
+        "iniciar":"E agora é a minha vez!"
+    },
     "Escalas":{
         "proximo":"Próxima",
         "botao":"Pronto!",
@@ -75,7 +99,8 @@ const portugues_br = {
         "p20":"Ânimo"
     },
     "Digitadas":{
-        "mensagem":"Já selecionei tudo",
+        "proximo":"Próxima",
+        "botao":"Pronto!",
 
         "p1":"Conhecimento",
         "p2":"Vermelho",
@@ -85,7 +110,7 @@ const portugues_br = {
         "p6":"Justiça",
         "p7":"Jogo",
         "p8":"Balança",
-        "p0":"Bolso",
+        "p9":"Bolso",
         "p10":"Verdade",
         "p11":"Corrupção",
         "p12":"Plano",
@@ -150,8 +175,23 @@ const portugues_br = {
         "p51":"Fogo"
     },
     "Resultado":{
-        "titulo":"Você...",
-        "agradecimento":"obrigado pela sua participação!"  
+        "vv":"O IAssociador descobriu que você pegou a barra de ouro!",
+        "vv_comentarios":"O IAssociador acertou essa. Ponto para ele!",
+        "vf":"O IAssociador não desconfiou de você!",
+        "vf_comentarios":"O que é um sucesso, já que não foi você que pegou a barra.",
+        "fv":"Você enganou o IASociador!",
+        "fv_comentarios":"O IAssociador ainda tem muito a aprender...",
+        "ff":"O IASociador desconfiou de você!",        
+        "ff_comentarios":"Que vergonha, vamos treinar melhor esse computador, já que você não pegou nada.",
+        "agradecimento":"Muito obrigado pela sua participação!",
+
+        "sobre":"Sobre este projeto:",
+        "codigo":"Código fonte:",
+        "desenvolvido":"Este projeto foi desenvolvido usando:",
+        "hospedagem": "Hospedado em:",
+        "fale comigo":"Meu contato",
+        "fonte_imagens":"As imagens e gifs vieram de:",
+        "fonte_som":"e o som de:",
     }
 }
 

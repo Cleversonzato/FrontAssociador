@@ -1,14 +1,21 @@
 <template>
   <div class="teste">
     <div class="row">
-      <div class="historia" v-show="!(selecionado)">
-        <historia-ouro v-on:iniciar="iniciar_teste" v-if="seed >= 0.5" />
-        <historia-espiao v-on:iniciar="iniciar_teste" v-if="seed < 0.5" />
+      <div class="historia col-12" v-show="!(selecionado)">
+        <historia-ouro v-on:iniciar="iniciar_teste" />
       </div>
-      <div class="respostas" v-show="selecionado">
+      <div class="respostas col-12" v-show="selecionado">
         <teste-opcoes v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'opcoes'"/>
         <teste-escalas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'escalas'"/>
         <teste-digitadas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'digitadas'"/>
+
+        <div class="carregando" v-show="tipo_teste == 'finalizando'">
+          <div>
+            {{ l.carregando }}
+          </div>
+          <br/>
+          <img src="/images/calculando.svg" class="img-fluid" :alt="l.imagem_carregando" />      
+        </div>
       </div>
     </div>    
   </div>
@@ -17,7 +24,6 @@
 <script>
 // import axios from '../axios'
 import HistoriaOuroPerdido from '../components/historias/OuroPerdido'
-import HistoriaEspiao from '../components/historias/Espiao'
 import TesteOpcoes from '../components/testes/Opcoes'
 import TesteEscalas from '../components/testes/Escalas'
 import TesteDigitadas from '../components/testes/Digitadas'
@@ -27,7 +33,6 @@ export default {
   name: 'Teste',
   components: {      
       'historia-ouro': HistoriaOuroPerdido,
-      'historia-espiao': HistoriaEspiao,
       'teste-opcoes': TesteOpcoes,
       'teste-escalas': TesteEscalas,
       'teste-digitadas': TesteDigitadas
@@ -36,14 +41,15 @@ export default {
     return{
       id_teste: localStorage.teste,
       tipo_teste: this.$route.params.tipo,
-      seed: Math.random(),
       selecionado: false,
+      selecao:"",
       tempoInicial:0
     }
   },
   methods:{
     iniciar_teste(escolha){
       this.tempoInicial = Date.now()
+      this.selecao = escolha.selecao
       console.log({
         'tempo_milisegundo': this.tempoInicial,
         'escolha':escolha
@@ -74,15 +80,17 @@ export default {
         // });
     },
     finalizar(resultados){
-
+      this.tipo_teste = 'finalizando'
       console.log(this.id_teste)
       console.log(this.tipo_teste)
+      console.log(this.selecao)
       console.log(resultados)
 
-      this.$router.push({name:'resultado', query:{'resultado':'r'}})
+      this.$router.push({name:'resultado', query:{'resultado':'vv'}})
       // axios.post('resultado', {
       //     'id_teste': this.id_teste,
       //     'tipo_teste': this.tipo_teste,
+      //     'escolha':this.selecao,
       //     'resultados':resultados
                     
       //   }).then(function (response) {
@@ -93,3 +101,8 @@ export default {
   }  
 }
 </script>
+<style scoped>
+.carregando{
+  margin: 20%;
+}
+</style>

@@ -1,14 +1,17 @@
 <template>
   <div class="teste-digitadas">
-
-    <div class="form-group form-check">
-        <input type="text" class="form-check-input" v-on:click="evento" id='p1'>
-        <label class="form-check-label">{{ l.p1 }}</label>
+    <div class="area-teste">
+      <div v-for="(item, nome, i) in palavras" :key="item">      
+        <div class="form-group col-12" v-show="i == contador">  
+          <label class="col-form-label" :for="nome"><h3>{{ l[nome] }}</h3></label> 
+          <input type="text" class="form-control-range col-12" :id="nome" v-on:keyup="evento" v-model="item.valor"/>           
+        </div>                 
+      </div>
     </div>
-
-
-    {{ l.mensagem }}
-    <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ l.botao }} </button>
+    <div class="col-12">
+      <button type="button" class="btn btn-info" v-on:click="proximo" v-show="contador < 14"> {{ l.proximo }} </button>
+      <button type="button" class="btn btn-info" v-on:click="finalizar" v-show="contador == 14"> {{ l.botao }} </button>
+    </div>
   </div>
 </template>
 
@@ -16,26 +19,56 @@
 export default {
   name: 'Digitadas',
   props:['inicio'],
-  methods:{   
+  methods:{
       evento(evento){
         const id = evento.target.id
-        const tempo = new Date().getTime()-this.tempoInicial
-        const sel = evento.target.checked
         const palavra = this.$data.palavras[id]
-        
-        palavra.tempo = tempo
-        palavra.sel = sel
-        
-        this.$emit('evento', {'id_palavra': id, 'seleção': sel, 'tempo':tempo})  
+        if(this.tempoInicialPalavra === 0){
+          this.tempoInicialPalavra = this.inicio
+        }
+        palavra.tempo = new Date().getTime()- this.tempoInicialPalavra
+
+        this.$emit('evento', {'id_palavra': id, 'valor': palavra.valor, 'tempo_milisegundo': palavra.tempo})  
       },
-      finalizar(){
-        this.$emit('finalizar', this.palavras)
+      proximo(){
+        this.contador += 1
+        this.tempoInicialPalavra = new Date().getTime()
+      },
+      finalizar(){       
+        const tempo = new Date().getTime()- this.inicio
+        this.$emit('finalizar', {'tempo_milisegundo':tempo, 'palavras':this.palavras})
       }
   },
   data(){
     return{
-      tempoInicial:0
+      tempoInicialPalavra: 0,
+      contador:0,
+
+      palavras:{
+        p1:{valor:'', tempo:0},
+        p2:{valor:'', tempo:0},
+        p3:{valor:'', tempo:0},
+        p4:{valor:'', tempo:0},
+        p5:{valor:'', tempo:0},
+        p6:{valor:'', tempo:0},
+        p7:{valor:'', tempo:0},
+        p8:{valor:'', tempo:0},
+        p9:{valor:'', tempo:0},
+        p10:{valor:'', tempo:0},
+        p11:{valor:'', tempo:0},
+        p12:{valor:'', tempo:0},
+        p13:{valor:'', tempo:0},
+        p14:{valor:'', tempo:0},
+        p15:{valor:'', tempo:0}
+      }
     }  
   }
 }
 </script>
+
+<style scoped>
+.area-teste{
+  margin-top:30%;
+  margin-bottom:15%;
+}
+</style>

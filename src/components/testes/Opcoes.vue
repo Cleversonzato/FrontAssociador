@@ -6,8 +6,10 @@
           <label class="form-check-label" :for="name">{{ l[name] }} </label>
       </div>
     </div>
-    {{ l.mensagem }}
-    <br/>
+    <div>
+      {{ l.mensagem }}
+      <br/>
+    </div>
     <button type="button" class="btn btn-info col-6" v-on:click="finalizar"> {{ l.botao }} </button>
   </div>
 </template>
