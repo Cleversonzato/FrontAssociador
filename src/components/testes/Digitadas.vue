@@ -15,13 +15,8 @@
 <script>
 export default {
   name: 'Digitadas',
-  mounted(){
-    this.iniciar()
-  },
-  methods:{
-      iniciar(){
-        this.tempoInicial = new Date().getTime()
-      },
+  props:['inicio'],
+  methods:{   
       evento(evento){
         const id = evento.target.id
         const tempo = new Date().getTime()-this.tempoInicial

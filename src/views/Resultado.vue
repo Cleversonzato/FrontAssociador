@@ -2,6 +2,7 @@
   <div class="resultado">       
     gfdgdfg
   </div>
+  Projeto desenvolvido em ...
 </template>
 
 <script>

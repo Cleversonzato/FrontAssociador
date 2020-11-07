@@ -45,7 +45,7 @@ export default {
     iniciar_teste(escolha){
       this.tempoInicial = Date.now()
       console.log({
-        'data_milisegundos': this.tempoInicial,
+        'tempo_milisegundo': this.tempoInicial,
         'escolha':escolha
       })
       // axios.post('escolha', {
