@@ -187,7 +187,8 @@ const portugues_br = {
     },
     "Final":{
         "agradecimento":"Muito obrigado pela sua participação!",
-        "mais":"E se tiver um tempo sobrando, aproveite para participar novamente com outros tipos de teste!",
+        "mais":"E se tiver um tempo sobrando, aproveite para participar novamente com outros tipos de teste. \
+        Quanto mais participações tivermos, melhor será a pesquisa!",
         "sobre":"Sobre este projeto:",
         "autor":"Responsável:",
         "codigo":"Código fonte:",

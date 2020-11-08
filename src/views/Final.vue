@@ -2,7 +2,7 @@
   <div class="final">     
     <div class="agradecimento">
       <h1>{{ l.agradecimento }}</h1>
-      <br/>
+        <div><img src="/images/tchau.png" class="img-fluid" alt="Imagem de erro"/></div>
       {{ l.mais }}
     </div>
   </div>
@@ -52,5 +52,8 @@ export default {
 }
 ul{
   text-align: justify;
+}
+img{
+    padding:3px;
 }
 </style>
