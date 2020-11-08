@@ -6,8 +6,8 @@ const portugues_br = {
         "descricao":'Este site realiza uma pesquisa sobre associação e comportamento na interação com uma inteligência artificial: \
                     Será apresentada para você uma situação interativa a partir da qual o IAssociador vai tentar descobrir quais foram as suas decisões e, \
                     aos poucos, aprender a adivinhar cada vez com mais precisão.',
-        "dados":'Nenhum dado é de preenchimento obrigatório e nenhuma forma de identificação que possa identificar você com as respostas é armazenada \
-                 sendo que todas as informações são utilizadas exclusivamente com o objetivo de construir um perfil para a pesquisa em questão.',
+        "dados":'Nenhum dado é de preenchimento obrigatório e nenhuma forma de identificação que possa identificar você com as respostas é armazenada. \
+                 Todas as informações serão utilizadas exclusivamente para fins acadêmicos, com o objetivo de construir um perfil para a pesquisa em questão.',
 
         "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
         "butao":"Sim, continue"
@@ -178,20 +178,24 @@ const portugues_br = {
         "vv":"O IAssociador descobriu que você pegou a barra de ouro!",
         "vv_comentarios":"O IAssociador acertou essa. Ponto para ele!",
         "vf":"O IAssociador não desconfiou de você!",
-        "vf_comentarios":"O que é um sucesso, já que não foi você que pegou a barra.",
+        "vf_comentarios":"O que é um sucesso, já que não foi você quem pegou a barra.",
         "fv":"Você enganou o IASociador!",
         "fv_comentarios":"O IAssociador ainda tem muito a aprender...",
         "ff":"O IASociador desconfiou de você!",        
-        "ff_comentarios":"Que vergonha, vamos treinar melhor esse computador, já que você não pegou nada.",
+        "ff_comentarios":"Que vergonha. Vamos ter que treinar mais!",
+        "proximo":"e por fim..."
+    },
+    "Final":{
         "agradecimento":"Muito obrigado pela sua participação!",
-
+        "mais":"E se tiver um tempo sobrando, aproveite para participar novamente com outros tipos de teste!",
         "sobre":"Sobre este projeto:",
+        "autor":"Responsável:",
         "codigo":"Código fonte:",
         "desenvolvido":"Este projeto foi desenvolvido usando:",
         "hospedagem": "Hospedado em:",
         "fale comigo":"Meu contato",
-        "fonte_imagens":"As imagens e gifs vieram de:",
-        "fonte_som":"e o som de:",
+        "fonte_imagens":"Imagens e gifs:",
+        "fonte_som":"Som:",
     }
 }
 

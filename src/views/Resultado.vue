@@ -1,48 +1,27 @@
 <template>
-  <div class="resultado"> 
-    <div>    
-      <div>
-        <h1>{{ l.vv }}</h1>
-        {{ l.vv_comentarios }}
-      </div>
-      <div>
-        <h1>{{ l.vf }}</h1>
-        {{ l.vf_comentarios }}
-      </div>
-      <div>
-        <h1>{{ l.fv }}</h1>
-        {{ l.fv_comentarios }}
-      </div>
-      <div>
-        <h1>{{ l.ff }}</h1>
-        {{ l.ff_comentarios }}
-      </div>
+  <div class="resultado">    
+    <div v-if="resultado == 'vv'">
+      <h1>{{ l.vv }}</h1>
+      <img src="/images/acerto.png" class="img-fluid" alt="Imagem de comemoração" />
+      <h3>{{ l.vv_comentarios }}</h3>
     </div>
-    <h1>{{ l.agradecimento }}</h1>
-  </div>
-  <div class="fim">
-    {{ l.sobre }}
-    <div>
-      {{ l.codigo }}  <a href="https://github.com/Cleversonzato/IAssociador"><img src="/images/github.jpg" class="img-fluid" alt="github logo" width="70" />https://github.com/Cleversonzato/IAssociador</a>
+    <div v-if="resultado == 'vf'">
+      <h1>{{ l.vf }}</h1>
+      <img src="/images/acerto.png" class="img-fluid" alt="Imagem de comemoração"/>
+      <h3>{{ l.vf_comentarios }}</h3>
     </div>
-    <div>
-      {{ l.desenvolvido }} 
-      <a href="https://vuejs.org/"><img src="/images/vue.png" class="img-fluid" alt="vue logo" width="38" /></a>
-      <a href="https://www.python.org/"><img src="/images/python.png" class="img-fluid" alt="python logo" width="50" /></a>
-      <a href="https://www.mongodb.com"><img src="/images/mongo.jpg" class="img-fluid" alt="mongodb logo" width="150"/></a>
+    <div v-if="resultado == 'fv'">
+      <h1>{{ l.fv }}</h1>
+      <img src="/images/erro.png" class="img-fluid" alt="Imagem de erro"/>
+      <h3>{{ l.fv_comentarios }}</h3>
     </div>
-    <div>
-      {{ l.hospedagem }}
-      <a href="https://www.heroku.com/"><img src="/images/heroku.png" class="img-fluid" alt="heroku logo" width="150"/></a>
-      <a href="https://www.mongodb.com/cloud/atlas"><img src="/images/atlas.jpeg" class="img-fluid" alt="mongodb atlas logo" width="150"/></a>
+    <div v-if="resultado == 'ff'">
+      <h1>{{ l.ff }}</h1>
+      <img src="/images/erro.png" class="img-fluid" alt="Imagem de erro"/>
+      <h3>{{ l.ff_comentarios }}</h3>
     </div>
-      {{ l.fonte_imagens }} 
-      <a href="https://pixabay.com"> https://pixabay.com </a>, 
-      <a href="https://loading.io/"> https://loading.io/</a>
-      <br/>
-      {{ l.fonte_som }} 
-      <a href="https://www.bensound.com/"> https://www.bensound.com/ </a>   
-    </div>
+  </div> 
+  <router-link to="/final"><button class="btn btn-success final">{{ l.proximo }}</button> </router-link>   
 </template>
 
 <script>
@@ -55,3 +34,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+img{
+  margin: 5%;
+}
+</style>
