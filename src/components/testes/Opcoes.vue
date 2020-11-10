@@ -24,12 +24,11 @@ export default {
         const palavra = this.$data.palavras[id]        
         
         palavra.tempo = new Date().getTime()- this.inicio
-        
-        this.$emit('evento', {'id_palavra': id, 'seleção': palavra.selecao, 'tempo_milisegundo': palavra.tempo})  
+        this.$emit('evento', {'id_palavra': id, 'seleção': !palavra.selecao, 'tempo_milisegundo': palavra.tempo})  
       },
       finalizar(){
         const tempo = new Date().getTime()- this.inicio
-        this.$emit('finalizar', {'tempo': tempo, 'palavras':this.palavras})
+        this.$emit('finalizar', {'tempo_total_milisegundos': tempo, 'palavras':this.palavras})
       }
   },
   data(){

@@ -44,44 +44,48 @@
 </template>
 
 <script>
-import axios from '../axios'
+import axios_local from '../axios'
+import axios from 'axios'
 
 export default {
   name: 'Perfil',
+  beforeCreate(){
+    const self = this
+    axios.get('https://api.ipify.org?format=json')
+     .then((retorno)=>{
+        self.ip = retorno.data.ip
+       })
+  },
   data(){
     return{
-      clicado:false
+      clicado:false,
+      ip:"Ainda não localizado"
     }
   },
   methods:{
     iniciar_pesquisa(){
       this.clicado = true
-      const self = this
-      console.log({
+      const self = this    
+      self.$router.push('selecao')
+      axios_local.post('perfil', {
+            'lingua': localStorage.lang,
+            'language': navigator.languages,
             'data_milisegundos': Date.now(),
-            'ip': 'lembrar de pegar o ip no back',
+            'ip': this.ip,
             'userAgent': navigator.userAgent,
             'largura':window.innerWidth,
-            'altura': window.innerHeight})      
-      self.$router.push('selecao')
-      // axios.post('perfil', {
-      //       'lingua': localStorage.lang,
-      //       'data_tc': Date.UTC(),
-      //       'local': window.location,
-      //       'userAgent': navigator.userAgent,
-      //       'largura':window.innerWidth,
-      //       'altura': window.innerHeight,
-      //       'dt_nasc': this.$refs.dt_nasc.value,
-      //       'sexo':this.$refs.sexo.value,
-      //       'raca':this.$refs.raca.value,
-      //       'escolaridade':this.$refs.escolaridade.value,
-      //       'residencia':this.$refs.residencia.value,
-      //       'lateralidade':this.$refs.lateralidade.value
+            'altura': window.innerHeight,
+            'dt_nasc': this.$refs.dt_nasc.value,
+            'sexo':this.$refs.sexo.value,
+            'raca':this.$refs.raca.value,
+            'escolaridade':this.$refs.escolaridade.value,
+            'residencia':this.$refs.residencia.value,
+            'lateralidade':this.$refs.lateralidade.value
             
-      //     }).then(function (response) {
-      //       localStorage.teste = response.data.teste
-      //       self.$router.push('selecao')
-      //     });
+          }).then(function (response) {
+            localStorage.teste = response.data.teste
+            self.$router.push('selecao')
+          });
     }
   }
 }

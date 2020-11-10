@@ -36,7 +36,7 @@ export default {
       },
       finalizar(){       
         const tempo = new Date().getTime()- this.inicio
-        this.$emit('finalizar', {'tempo_milisegundo':tempo, 'palavras':this.palavras})
+        this.$emit('finalizar', {'tempo_total_milisegundo':tempo, 'palavras':this.palavras})
       }
   },
   data(){

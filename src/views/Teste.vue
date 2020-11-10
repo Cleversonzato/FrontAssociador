@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// import axios from '../axios'
+import axios from '../axios'
 import HistoriaOuroPerdido from '../components/historias/OuroPerdido'
 import TesteOpcoes from '../components/testes/Opcoes'
 import TesteEscalas from '../components/testes/Escalas'
@@ -50,53 +50,33 @@ export default {
     iniciar_teste(escolha){
       this.tempoInicial = Date.now()
       this.selecao = escolha.selecao
-      console.log({
-        'tempo_milisegundo': this.tempoInicial,
-        'escolha':escolha
-      })
-      // axios.post('escolha', {
-      //     'id_teste': this.id_teste,
-      //     'tipo_teste': this.tipo_teste,
-      //     'seed':this.seed,
-      //     'data_tc': Date.UTC(),
-      //     'escolha':escolha                    
-      //   }).then(function (response) {
-      //     console.log(response)
-      //   });
 
+      axios.post('escolha', {
+          'id_teste': this.id_teste,
+          'tipo_teste': this.tipo_teste,
+          'tempo_inicio_milisegundo': this.tempoInicial,
+          'escolha':escolha                    
+        });
       this.selecionado = true
     },
     evento(evento){
-      console.log(this.id_teste)
-      console.log(this.tipo_teste)
-      console.log(evento)
-
-      // axios.post('evento', {
-      //     'id_teste': this.id_teste,
-      //     'tipo_teste': this.tipo_teste,
-      //     'evento':evento                    
-      //   }).then(function (response) {
-      //     console.log(response)
-        // });
+      axios.post('evento', {
+          'id_teste': this.id_teste,
+          'tipo_teste': this.tipo_teste,
+          'evento':evento                    
+        });
     },
     finalizar(resultados){
-      this.tipo_teste = 'finalizando'
-      console.log(this.id_teste)
-      console.log(this.tipo_teste)
-      console.log(this.selecao)
-      console.log(resultados)
-
-      this.$router.push({name:'resultado', query:{'resultado':'vv'}})
-      // axios.post('resultado', {
-      //     'id_teste': this.id_teste,
-      //     'tipo_teste': this.tipo_teste,
-      //     'escolha':this.selecao,
-      //     'resultados':resultados
-                    
-      //   }).then(function (response) {
-      //     console.log(response)
-      //     this.$router.push({name:'resultado', query:{'resultado':resultado.culpado}})
-      //   });
+      const self=this      
+      axios.post('resultado', {
+          'id_teste': this.id_teste,
+          'tipo_teste': this.tipo_teste,
+          'escolha':this.selecao,
+          'resultados':resultados
+        }).then(function (response) {
+          self.$router.push({name:'resultado', query:{'resultado':response.data.sigla}})
+        });
+        this.tipo_teste = 'finalizando'
     }
   }  
 }
