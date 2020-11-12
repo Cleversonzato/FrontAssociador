@@ -20,13 +20,18 @@
       <img src="/images/erro.png" class="img-fluid" alt="Imagem de erro"/>
       <h3>{{ l.ff_comentarios }}</h3>
     </div>
-  </div> 
+  </div>
+  <dados/>
   <router-link to="/final"><button class="btn btn-success final">{{ l.proximo }}</button> </router-link>   
 </template>
 
 <script>
+import Dados from '../components/Dados'
 export default {
   name: 'Resultado', 
+   components: {      
+      'dados': Dados
+   },
   data(){
     return{
       resultado: this.$route.query.resultado

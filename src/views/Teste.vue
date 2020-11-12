@@ -14,7 +14,7 @@
             {{ l.carregando }}
           </div>
           <br/>
-          <img src="/images/calculando.svg" class="img-fluid" :alt="l.imagem_carregando" />      
+          <img :src="require('../../images/calculando.svg')" class="img-fluid" :alt="l.imagem_carregando" />      
         </div>
       </div>
     </div>    

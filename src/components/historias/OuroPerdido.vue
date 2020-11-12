@@ -1,13 +1,13 @@
 <template>
   <div class="ouro-perdido">     
     <div class="imagens">
-      <img :src="'/images/rua.jpg'" class="img-fluid" :alt="l.rua_alt" v-show="etapa < 4"/>
-      <img :src="'/images/ouro.jpg'" class="img-fluid" :alt="l.ouro_alt" v-show="3 < etapa & etapa < 8" />
-      <img :src="'/images/reporteres.jpg'" class="img-fluid" :alt="l.reporteres_alt" v-show="7 < etapa & etapa < 12"/>
-      <img :src="'/images/exame.jpg'" class="img-fluid" :alt="l.rexame_alt" v-show=" 12 === etapa"/>
+      <img :src="require('../../../images/rua.jpg')" class="img-fluid" :alt="l.rua_alt" v-show="etapa < 4"/>
+      <img :src="require('../../../images/ouro.jpg')" class="img-fluid" :alt="l.ouro_alt" v-show="3 < etapa & etapa < 8" />
+      <img :src="require('../../../images/reporteres.jpg')" class="img-fluid" :alt="l.reporteres_alt" v-show="7 < etapa & etapa < 12"/>
+      <img :src="require('../../../images/exame.jpg')" class="img-fluid" :alt="l.rexame_alt" v-show=" 12 === etapa"/>
     </div>
     <div class="textos" >
-      <div v-for="i in 12">  
+      <div v-for="i in 12" :key="i">  
         <div v-show="etapa == i">{{ l[i] }}</div>
       </div>
     </div>   
@@ -33,7 +33,7 @@ export default {
     return{
       etapa:1,
       selecao:"",
-      audio:new Audio('/historia.mp3')
+      audio:new Audio('../../../historia.mp3')
     }
   },
   methods:{

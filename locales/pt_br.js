@@ -4,18 +4,18 @@ const portugues_br = {
         "image_alt": 'Imagem do título',
         "sub_titulo": "Seja bem vindo(a) à este site de pesquisa sobre associações, testes e inteligência artificial",
         "descricao":'Este site realiza uma pesquisa sobre associação e comportamento na interação com uma inteligência artificial: \
-                    Será apresentada para você uma situação interativa a partir da qual o IAssociador vai tentar descobrir quais foram as suas decisões e, \
+                    Será apresentada para você uma situação interativa a partir da qual o IAssociador vai tentar descobrir qual foi a sua decisão e, \
                     aos poucos, aprender a adivinhar cada vez com mais precisão.',
-        "dados":'Nenhum dado é de preenchimento obrigatório e nenhuma forma de identificação que possa identificar você com as respostas é armazenada. \
-                 Todas as informações serão utilizadas exclusivamente para fins acadêmicos, com o objetivo de construir um perfil para a pesquisa em questão.',
+        "dados":'Nenhum dado é de preenchimento obrigatório e nenhuma finformação que possa identificar você é armazenada. \
+                 Todas as informações serão utilizadas exclusivamente fins acadêmicos, com o objetivo de construir um perfil para a pesquisa em questão.',
 
         "frase_confirmar":"Sabendo disso, você concorda e deseja continuar neste experimento?",
-        "butao":"Sim, continue"
+        "botao":"Sim, continue"
     },
     "Perfil":{
         "titulo":"Dados socioeconômicos",
         "explicacao": "Por favor, preencha com suas informações: *",
-        "observacao": "*Todos as informações auto declaratórias e de respostas abertas e nenhuma é obrigatória para continuar.",
+        "observacao": "*Todos as informações são auto declaratórias, de respostas abertas e nenhuma é obrigatória para continuar.",
         "dt_nasc": "Data de nascimento:",
         "sexo": "Sexo:",
         "raca": "Raça:",
@@ -33,7 +33,7 @@ const portugues_br = {
         'escalas':'Escalas',
         'digitadas':'Escrever a palavra',
         'explicacao_opcoes':'Para este teste, serão apresentadas várias palavras com a opção de selecioná-las ou não. \
-                             basta selecionar as palavras que você acha que deve selecionar.',
+                             Basta selecionar as palavras que você acha que deve selecionar.',
         'exemplo_opcoes1': 'Selecione',
         'exemplo_opcoes2': 'Várias',
         'exemplo_opcoes3': 'Opções',
@@ -44,7 +44,7 @@ const portugues_br = {
         'exemplo_escalas': 'Quantidade',
         'explicacao_digitadas':'Neste formato, é apresentada uma palavra e você deve escrever a primeira paravra que vier à mente',                                
         'exemplo_digitadas': 'Digitação',
-        'exemplo_digitadas_input': 'EscrevaUmaPalavraRelacionadaAqui',
+        'exemplo_digitadas_input': 'EscrevaUmaPalavraRelacionadaÀDigitaçãoAqui',
         'botao': 'Eu quero esse!'
     }, 
     "Teste":{
@@ -59,13 +59,13 @@ const portugues_br = {
         "5":"...uma barra de ouro!!!",
         "6":"É estranho achar uma barra de ouro assim, no meio da rua... Mas ao mesmo tempo, não tem ninguém perto...",
         "7":"É a hora de decidir! Será que...",
-        "pegar":"... pego o ouro?",
-        "deixar": "... deixo aqui e vou embora?",
+        "pegar":"... pego o ouro!",
+        "deixar": "... deixo aqui e vou embora!",
         "8": "Saindo da rua, vejo uma aglomeração de repórteres. Parece que acabaram de prender um ladrão que roubou uma barra de ouro!",
         "9": "E ao fugir, ele perdeu o ouro justamente onde acabei de passar...",
         "10": "Os investigadores estão verificando o local agora mesmo, mas ainda não encontraram nada. Acreditam que alguém já pegou a barra",
         "11": "E agora querem aplicar um teste em todos os que estão por perto para descobrir com quem está o ouro!",
-        "12": "Parece que usar um computador, e já começaram com a pessoa aqui na minha frente...",
+        "12": "Parece que usar um computador. E já começaram com a pessoa aqui na minha frente...",
         "rua_alt":"imagem de rua tranquila",
         "ouro_alt":"imagem de barra de ouro",
         "reporteres_alt":"imagem de repórteres",
@@ -143,7 +143,7 @@ const portugues_br = {
         "p19":"Plano",
         "p20":"Ânimo",
         "p21":"Errado",
-        "p22":"Vontade",
+        "p22":"Deixar",
         "p23":"Enganar",
         "p24":"Montanha",
         "p25":"Pai",
@@ -185,6 +185,14 @@ const portugues_br = {
         "ff_comentarios":"Que vergonha. Vamos ter que treinar mais!",
         "proximo":"e por fim..."
     },
+    "Dados":{
+        "titulo": "Estatísticas do IAssociador",
+        "acertos": "acertos",
+        "erros": "erros",
+        'opcoes':'Testes de marcar opções',
+        'escalas':'Testes de escalas',
+        'digitadas':'Testes de escrever a palavra',        
+    },
     "Final":{
         "agradecimento":"Muito obrigado pela sua participação!",
         "mais":"E se tiver um tempo sobrando, aproveite para participar novamente com outros tipos de teste. \
@@ -193,8 +201,7 @@ const portugues_br = {
         "autor":"Responsável:",
         "codigo":"Código fonte:",
         "desenvolvido":"Este projeto foi desenvolvido usando:",
-        "hospedagem": "Hospedado em:",
-        "fale comigo":"Meu contato",
+        "hospedagem": "Hospedado com:",
         "fonte_imagens":"Imagens e gifs:",
         "fonte_som":"Som:",
     }

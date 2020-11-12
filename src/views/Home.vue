@@ -1,7 +1,7 @@
 <template>
   <div class="home">       
     <h1>{{ l.titulo }}</h1>    
-    <img :src="'/images/exercicio_'+imagem+'.png'" class="img-fluid" :alt="l.image_alt" />    
+    <img :src="require('../../images/exercicio_'+imagem+'.png')" class="img-fluid" :alt="l.image_alt" />    
     <h3>{{ l.sub_titulo }}</h3>
     <div class="home-body">
       <div>{{ l.descricao }}</div>
@@ -11,7 +11,7 @@
     <div class="final">
       {{ l.frase_confirmar }}
     </div>    
-    <button type="button" class="btn btn-success final" v-on:click="concordou">{{ l.butao }}</button>           
+    <button type="button" class="btn btn-success final" v-on:click="concordou">{{ l.botao }}</button>           
   </div>
 </template>
 
