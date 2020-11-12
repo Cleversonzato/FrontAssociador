@@ -41,7 +41,11 @@ router.beforeEach((to, from, next) => {
   if (!localStorage.getItem("concorda") && to.name != 'home'){
       next({name:'home'})
   } else {
-    next()
+    if(!localStorage.teste && to.name != 'home' && to.name != 'perfil'){
+      next({name:'home'})
+    }else{
+      next()
+    }
   }  
 })
 

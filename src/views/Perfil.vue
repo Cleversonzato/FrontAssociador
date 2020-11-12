@@ -66,7 +66,6 @@ export default {
     iniciar_pesquisa(){
       this.clicado = true
       const self = this    
-      self.$router.push('selecao')
       axios_local.post('perfil', {
             'lingua': localStorage.lang,
             'language': navigator.languages,

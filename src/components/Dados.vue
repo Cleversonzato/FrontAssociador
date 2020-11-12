@@ -22,18 +22,19 @@ import axios from '../axios'
 export default {
   name:'Dados',
   methods:{
-      forno_de_pizza:function(componente, nome, d1, d2){
+      forno_de_pizza:function(componente, nome, acertos, erros){
         return new Chart(componente, {
             type:'pie',
-            data:{labels: [this.l.acertos, this.l.erros],
+            data:{labels: [this.l.acertos+" ("+acertos+")", this.l.erros+" ("+erros+")"],
             datasets: [{
-                data: [d1, d2],
+                data: [acertos, erros],
                 backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(255, 99, 132, 0.2)'],
                 borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)' ],
                 borderWidth: 1
             }]},
             options:{
-                title:{display:true, text:nome, fontFamily:'Arial' }
+                title:{display:true, text:nome, fontFamily:'Arial', padding:15 },
+                legend:{labels:{usePointStyle:true}, position:'bottom'}
             }
         })
       }
@@ -41,9 +42,9 @@ export default {
   mounted () {
       const self = this
       axios.get('dados').then(function (response) {
-        self.forno_de_pizza(this.$refs['opcoes'], this.l.opcoes, response.data.opcoes.acertos, response.data.opcoes.erros)
-        self.forno_de_pizza(this.$refs['escalas'], this.l.escalas, response.data.escalas.acertos, response.data.escalas.erros)
-        self.forno_de_pizza(this.$refs['digitadas'], this.l.digitadas, response.data.digitadas.acertos, response.data.digitadas.erros)
+        self.forno_de_pizza(self.$refs['opcoes'], self.l.opcoes, response.data.opcoes.acertos, response.data.opcoes.erros)
+        self.forno_de_pizza(self.$refs['escalas'], self.l.escalas, response.data.escalas.acertos, response.data.escalas.erros)
+        self.forno_de_pizza(self.$refs['digitadas'], self.l.digitadas, response.data.digitadas.acertos, response.data.digitadas.erros)
       });
   }
 }
