@@ -1,23 +1,19 @@
 <template>
   <div class="teste">
     <div class="row">
-      <div class="historia col-12" v-show="!(selecionado)">
-        <historia-ouro v-on:iniciar="iniciar_teste" />
+      <div class="historia col-12" v-show="tipo_teste != 'finalizando'">
+        <transition name="component-fade" mode="out-in">
+          <component v-bind:is="comp_atual" v-bind:inicio="tempoInicial" v-on:iniciar="iniciar_teste"  v-on:evento="evento" v-on:finalizar="finalizar"/>
+        </transition>
       </div>
-      <div class="respostas col-12" v-show="selecionado">
-        <teste-opcoes v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'opcoes'"/>
-        <teste-escalas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'escalas'"/>
-        <teste-digitadas v-on:evento="evento" v-bind:inicio="tempoInicial" v-on:finalizar="finalizar" v-if="tipo_teste === 'digitadas'"/>
-
-        <div class="carregando" v-show="tipo_teste == 'finalizando'">
-          <div>
-            {{ l.carregando }}
-          </div>
-          <br/>
-          <img :src="require('../../images/calculando.svg')" class="img-fluid" :alt="l.imagem_carregando" />      
+      <div class="carregando col-12" v-show="tipo_teste == 'finalizando'">
+        <div>
+          {{ l.carregando }}
         </div>
+        <br/>
+        <img :src="require('../../images/calculando.svg')" class="img-fluid" :alt="l.imagem_carregando" />      
       </div>
-    </div>    
+    </div>      
   </div>
 </template>
 
@@ -27,7 +23,6 @@ import HistoriaOuroPerdido from '../components/historias/OuroPerdido'
 import TesteOpcoes from '../components/testes/Opcoes'
 import TesteEscalas from '../components/testes/Escalas'
 import TesteDigitadas from '../components/testes/Digitadas'
-
 
 export default {
   name: 'Teste',
@@ -41,16 +36,17 @@ export default {
     return{
       id_teste: localStorage.teste,
       tipo_teste: this.$route.params.tipo,
-      selecionado: false,
       selecao:"",
-      tempoInicial:0
+      tempoInicial:0,
+      comp_atual:'historia-ouro'
     }
   },
   methods:{
     iniciar_teste(escolha){
       this.tempoInicial = Date.now()
       this.selecao = escolha.selecao
-
+      this.comp_atual = 'teste-'+this.tipo_teste
+      
       axios.post('escolha', {
           'id_teste': this.id_teste,
           'tipo_teste': this.tipo_teste,
@@ -83,6 +79,12 @@ export default {
 </script>
 <style scoped>
 .carregando{
-  margin: 20%;
+  margin-top: 20%;
+}
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
 }
 </style>

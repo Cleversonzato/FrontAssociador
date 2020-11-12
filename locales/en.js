@@ -2,19 +2,19 @@ const english = {
     "Home":{
         "titulo":"Let's train the IAssociador!",
         "image_alt": "Title image",
-        "sub_titulo": "Welcome to this research page about associations, assessments and artificial inteligence.",
-        "descricao": "This page is a research about associations and behaviour when interacting with an artificial inteligence: \
-                    Will be presented to you an interactive event from which the IAssociator will try to guess what was your choice and, \
-                    slowly, learn to guess more preciselly every time.",
+        "sub_titulo": "Welcome to this research site about associations, assessments and artificial inteligence.",
+        "descricao": "This page is meant to be a research about associations and behaviour when interacting with an artificial inteligence: \
+                    You will be presented to an interactive event and, from your actions, the IAssociator will try to guess what was your choice and \
+                    slowly learn to be more preciselly every time.",
         "dados":'No data is mandatory and no information that can be used to identify you is stored. \
-                Every information will be used for academic purpouses only, aiming to build a profile for this research.',
-        "frase_confirmar":"Knowing this, do you agree and wishes to continue with this experiment?",
+                Everything will be used for academic purpouses only, aiming to build a profile for this research.',
+        "frase_confirmar":"Knowing this, do you agree to continue with this experiment?",
         "botao":"Yes, continue"
     },
     "Perfil":{
         "titulo":"Socioeconomic data",
         "explicacao": "Please, fill with your information: *",
-        "observacao": "*Every information is self declaratory, has open answer and is not mandatory.",
+        "observacao": "*Every information is self declaratory, has open answers and is not mandatory.",
         "dt_nasc": "Birth date:",
         "sexo": "Sex:",
         "raca": "Race:",
@@ -31,7 +31,7 @@ const english = {
         'opcoes':'Checks',
         'escalas':'Scales',
         'digitadas':'Write the word',
-        'explicacao_opcoes':'In this test, there it will be presented many words with an option to check then or not.\
+        'explicacao_opcoes':'In this test, there will be many words with the option to check then or not.\
                              Just check the words you think that you should choose.',
         'exemplo_opcoes1': 'Check',
         'exemplo_opcoes2': 'Many',
@@ -39,9 +39,9 @@ const english = {
         'exemplo_opcoes4': 'Or',
         'exemplo_opcoes5': 'Maybe',
         'exemplo_opcoes6': 'Not',
-        'explicacao_escalas':'Here there will be many words, one at a time, for you to set the quantity you wish to it on the scale.',
+        'explicacao_escalas':'There will be many words, one at a time, for you to set to the amount you consider ideal on the scale.',
         'exemplo_escalas': 'Amount',
-        'explicacao_digitadas':'A word will be presented and you will have to describe the firt word that comes to your mind',
+        'explicacao_digitadas':'Some words will be presented and you will have to type the first word that comes to your mind',
         'exemplo_digitadas': 'Typing',
         'exemplo_digitadas_input': 'WriteAWordRelatedToTypingHere',
         'botao': 'I want this!'
@@ -57,20 +57,20 @@ const english = {
         "4":"...this...",
         "5":"...is a golden bar!!!",
         "6":"It is odd to find a golden bar like this, in the middle of the street... But at the same time, there is no one near...",
-        "7":"It is time to decide! Should I...",
+        "7":"It is time to decide! I will...",
         "pegar":"... take the gold!",
         "deixar": "... just pass by and leave!",
         "8": "Leaving the street, I can see a crowd of reporters. Seems like a thief that stole a golden bar has just been arested!",
-        "9": "And while running, he lost the gold right where I just passed...",
-        "10": "The investigators are checking the place right now, but still have not found anything. They belive that someone has already caught it",
-        "11": "And now they want to apply an assessment to try to figure  out who did it!",
-        "12": "Seems like it uses some kind of computer. And seems like they have already started with this person in front of me...",
+        "9": "And while running, he lost the gold right where I just passed by...",
+        "10": "The investigators are checking the place right now, but still have not found anything. They belive that someone already took it",
+        "11": "And now they want to apply an assessment to try to figure out who did it!",
+        "12": "Seems like it uses some kind of computer. And they have already started with this person in front of me...",
         "rua_alt":"calm street image",
         "ouro_alt":"golden bar image",
         "reporteres_alt":"reporteres image",
         "exame_alt":"person in an assessement image",
         "proximo":"Continue",
-        "iniciar":"And now is my turn!"
+        "iniciar":"And now it is my turn!"
     },
     "Escalas":{
         "proximo":"Next",
@@ -175,12 +175,12 @@ const english = {
     },
     "Resultado":{
         "vv":"The IAssociador figured out that you took the golden bar!",
-        "vv_comentarios":"The IAssociador got this right. Cheers to him!",
+        "vv_comentarios":"The IAssociador got this right. Hooray!",
         "vf":"The IAssociador did not suspect that you did it!",
         "vf_comentarios":"What is great, since you did not took the golden bar.",
         "fv":"You fooled the IASociador!",
         "fv_comentarios":"The IAssociador still has a lot to learn...",
-        "ff":"The IASociador suspected that you got the golden bar!",        
+        "ff":"The IASociador suspects that you got the golden bar!",        
         "ff_comentarios":"What a shame. We have to train more!",
         "proximo":"and to finish..."
     },
@@ -193,7 +193,7 @@ const english = {
         'digitadas':'"Write the word" format',        
     },
     "Final":{
-        "agradecimento":"Thank you very much for your articipation!",
+        "agradecimento":"Thank you very much for your participation!",
         "mais":"And if you have some time left, take this assessments again with other formats. \
                 The more answers we have, better this research will be!",
         "sobre":"About this project:",

@@ -50,7 +50,7 @@ export default {
 </script>
 <style scoped>
 .imagens{
-  margin-top: 7%;
+  margin-top: 10%;
 }
 .textos{
   margin:5%;
