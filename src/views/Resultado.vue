@@ -2,22 +2,22 @@
   <div class="resultado">    
     <div v-if="resultado == 'vv'">
       <h1>{{ l.vv }}</h1>
-      <img src="/images/acerto.png" class="img-fluid" alt="Imagem de comemoração" />
+      <img :src="require('../../images/acerto.png')" class="img-fluid" alt="Imagem de comemoração" />
       <h3>{{ l.vv_comentarios }}</h3>
     </div>
     <div v-if="resultado == 'vf'">
       <h1>{{ l.vf }}</h1>
-      <img src="/images/acerto.png" class="img-fluid" alt="Imagem de comemoração"/>
+      <img :src="require('../../images/acerto.png')" class="img-fluid" alt="Imagem de comemoração"/>
       <h3>{{ l.vf_comentarios }}</h3>
     </div>
     <div v-if="resultado == 'fv'">
       <h1>{{ l.fv }}</h1>
-      <img src="/images/erro.png" class="img-fluid" alt="Imagem de erro"/>
+      <img :src="require('../../images/erro.png')" class="img-fluid" alt="Imagem de erro"/>
       <h3>{{ l.fv_comentarios }}</h3>
     </div>
     <div v-if="resultado == 'ff'">
       <h1>{{ l.ff }}</h1>
-      <img src="/images/erro.png" class="img-fluid" alt="Imagem de erro"/>
+      <img :src="require('../../images/erro.png')" class="img-fluid" alt="Imagem de erro"/>
       <h3>{{ l.ff_comentarios }}</h3>
     </div>
   </div>
