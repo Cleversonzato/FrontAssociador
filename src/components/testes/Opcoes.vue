@@ -34,7 +34,7 @@ export default {
   data(){
     return{
       palavras:{
-        p1:{selecaoecao:false, tempo:0},
+        p1:{selecao:false, tempo:0},
         p2:{selecao:false, tempo:0},
         p3:{selecao:false, tempo:0},
         p4:{selecao:false, tempo:0},
