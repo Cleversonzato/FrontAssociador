@@ -59,7 +59,7 @@ export default {
       const self=this      
       axios.post('resultado', {
           'id_teste': this.id_teste,
-          'tempo_inicio_milisegundo': this.tempoInicial,
+          'tempo_inicio_milisegundos': this.tempoInicial,
           'tipo_teste': this.tipo_teste,
           'escolha':this.selecao,
           'resultados':resultados
