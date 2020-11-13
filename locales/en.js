@@ -203,6 +203,7 @@ const english = {
         "hospedagem": "Hosted with:",
         "fonte_imagens":"Images and gifs:",
         "fonte_som":"Sound:",
+        "de_novo":"Click here to start anoter test"
     }
 }
 

@@ -191,7 +191,7 @@ const portugues_br = {
         "erros": "erros",
         'opcoes':'Testes de marcar opções',
         'escalas':'Testes de escalas',
-        'digitadas':'Testes de escrever a palavra',        
+        'digitadas':'Testes de escrever a palavra',
     },
     "Final":{
         "agradecimento":"Muito obrigado pela sua participação!",
@@ -204,6 +204,7 @@ const portugues_br = {
         "hospedagem": "Hospedado com:",
         "fonte_imagens":"Imagens e gifs:",
         "fonte_som":"Som:",
+        "de_novo":"Clique aqui para fazer um outro de teste"
     }
 }
 

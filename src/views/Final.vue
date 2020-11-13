@@ -5,9 +5,14 @@
         <div><img :src="require('../../images/tchau.png')" class="img-fluid" alt="Imagem de erro" width="250"/></div>
         <br/>
       {{ l.mais }}
+      <br/>
+      <div>
+        <br/>
+        <router-link class="btn btn-info" to="/selecao">{{ l.de_novo }}</router-link>
+      </div>
     </div>
   </div>
-  <div class="fim  border">
+  <div class="fim border">
     <h3>{{ l.sobre }}</h3>
     <ul class="list-group border-0">
       <li class="list-group-item border-0">
