@@ -46,13 +46,6 @@ export default {
       this.tempoInicial = Date.now()
       this.selecao = escolha.selecao
       this.comp_atual = 'teste-'+this.tipo_teste
-      
-      axios.post('escolha', {
-          'id_teste': this.id_teste,
-          'tipo_teste': this.tipo_teste,
-          'tempo_inicio_milisegundo': this.tempoInicial,
-          'escolha':escolha                    
-        });
       this.selecionado = true
     },
     evento(evento){
@@ -66,6 +59,7 @@ export default {
       const self=this      
       axios.post('resultado', {
           'id_teste': this.id_teste,
+          'tempo_inicio_milisegundo': this.tempoInicial,
           'tipo_teste': this.tipo_teste,
           'escolha':this.selecao,
           'resultados':resultados
