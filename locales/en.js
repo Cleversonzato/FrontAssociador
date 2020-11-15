@@ -174,14 +174,14 @@ const english = {
         "p51":"Fire"
     },
     "Resultado":{
-        "vv":"The IAssociador figured out that you took the golden bar!",
-        "vv_comentarios":"The IAssociador got this right. Hooray!",
-        "vf":"The IAssociador did not suspect that you did it!",
-        "vf_comentarios":"What is great, since you did not took the golden bar.",
-        "fv":"You fooled the IASociador!",
-        "fv_comentarios":"The IAssociador still has a lot to learn...",
-        "ff":"The IASociador suspects that you got the golden bar!",        
-        "ff_comentarios":"What a shame. We have to train more!",
+        "r11":"The IAssociador figured out that you took the golden bar!",
+        "r11_comentarios":"The IAssociador got this right. Hooray!",
+        "r00":"The IAssociador did not suspect that you did it!",
+        "r00_comentarios":"What is great, since you did not took the golden bar.",
+        "r10":"You fooled the IASociador!",
+        "r10_comentarios":"The IAssociador still has a lot to learn...",
+        "r01":"The IASociador suspects that you got the golden bar!",        
+        "r01_comentarios":"What a shame. We have to train more!",
         "proximo":"and to finish..."
     },
     "Dados":{

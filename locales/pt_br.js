@@ -175,14 +175,14 @@ const portugues_br = {
         "p51":"Fogo"
     },
     "Resultado":{
-        "vv":"O IAssociador descobriu que você pegou a barra de ouro!",
-        "vv_comentarios":"O IAssociador acertou essa. Ponto para ele!",
-        "vf":"O IAssociador não desconfiou de você!",
-        "vf_comentarios":"O que é um sucesso, já que não foi você quem pegou a barra.",
-        "fv":"Você enganou o IASociador!",
-        "fv_comentarios":"O IAssociador ainda tem muito a aprender...",
-        "ff":"O IASociador desconfiou de você!",        
-        "ff_comentarios":"Que vergonha. Vamos ter que treinar mais!",
+        "r11":"O IAssociador descobriu que você pegou a barra de ouro!",
+        "r11_comentarios":"O IAssociador acertou essa. Ponto para ele!",
+        "r00":"O IAssociador não desconfiou de você!",
+        "r00_comentarios":"O que é um sucesso, já que não foi você quem pegou a barra.",
+        "r10":"O IAssociador não desconfiou de você!",
+        "r10_comentarios":"O IAssociador ainda tem muito a aprender...",
+        "r01":"O IASociador desconfiou de você!",        
+        "r01_comentarios":"Que vergonha. Vamos ter que treinar mais!",
         "proximo":"e por fim..."
     },
     "Dados":{

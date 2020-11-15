@@ -1,24 +1,24 @@
 <template>
   <div class="resultado">    
-    <div v-if="resultado == 'vv'">
-      <h1>{{ l.vv }}</h1>
+    <div v-if="resultado == '11'">
+      <h1>{{ l.r11 }}</h1>
       <img :src="require('../../images/acerto.png')" class="img-fluid" alt="Imagem de comemoração" />
-      <h3>{{ l.vv_comentarios }}</h3>
+      <h3>{{ l.r11_comentarios }}</h3>
     </div>
-    <div v-if="resultado == 'vf'">
-      <h1>{{ l.vf }}</h1>
+    <div v-if="resultado == '00'">
+      <h1>{{ l.r00 }}</h1>
       <img :src="require('../../images/acerto.png')" class="img-fluid" alt="Imagem de comemoração"/>
-      <h3>{{ l.vf_comentarios }}</h3>
+      <h3>{{ l.r00_comentarios }}</h3>
     </div>
-    <div v-if="resultado == 'fv'">
-      <h1>{{ l.fv }}</h1>
+    <div v-if="resultado == '01'">
+      <h1>{{ l.r01 }}</h1>
       <img :src="require('../../images/erro.png')" class="img-fluid" alt="Imagem de erro"/>
-      <h3>{{ l.fv_comentarios }}</h3>
+      <h3>{{ l.r01_comentarios }}</h3>
     </div>
-    <div v-if="resultado == 'ff'">
-      <h1>{{ l.ff }}</h1>
+    <div v-if="resultado == '10'">
+      <h1>{{ l.r10 }}</h1>
       <img :src="require('../../images/erro.png')" class="img-fluid" alt="Imagem de erro"/>
-      <h3>{{ l.ff_comentarios }}</h3>
+      <h3>{{ l.r10_comentarios }}</h3>
     </div>
   </div>
   <dados/>
