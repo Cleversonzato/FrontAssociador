@@ -32,7 +32,7 @@
     </div>
     <div class="row formulario">
       <label for="livre" class="col-form-label"> {{ l.livre }} </label> 
-      <textarea id="livre" class="form-control" ref="livre"/>     
+      <textarea id="livre" class="form-control" ref="livre"/>
     </div>
     <br/>
     <div class="final">
@@ -79,7 +79,8 @@ export default {
             'raca':this.$refs.raca.value,
             'escolaridade':this.$refs.escolaridade.value,
             'residencia':this.$refs.residencia.value,
-            'lateralidade':this.$refs.lateralidade.value
+            'lateralidade':this.$refs.lateralidade.value,
+            'livre':this.$refs.livre.value
             
           }).then(function (response) {
             localStorage.teste = response.data.teste
